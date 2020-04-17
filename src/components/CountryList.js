@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 import Select from 'react-select'
 
 function CountryList({ selected, setSelected }) {
@@ -41,6 +42,14 @@ function CountryList({ selected, setSelected }) {
       isLoading={isLoading}
     />
   )
+}
+
+CountryList.propTypes = {
+  selected: PropTypes.shape({
+    value: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired
+  }),
+  setSelected: PropTypes.func.isRequired
 }
 
 export default CountryList

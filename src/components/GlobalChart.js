@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { css } from 'styled-components'
 import 'styled-components/macro'
 import {
@@ -74,6 +75,10 @@ function GlobalChart({ data }) {
       </ResponsiveContainer>
     </div>
   )
+}
+
+GlobalChart.propTypes = {
+  data: PropTypes.array.isRequired
 }
 
 export default GlobalChart

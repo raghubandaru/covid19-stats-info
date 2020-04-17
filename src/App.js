@@ -93,17 +93,14 @@ function App() {
         <Card
           title="Confirmed"
           value={data.confirmed.value}
-          lastUpdate={data.lastUpdate}
         />
         <Card
           title="Recovered"
           value={data.recovered.value}
-          lastUpdate={data.lastUpdate}
         />
         <Card
           title="Deaths"
           value={data.deaths.value}
-          lastUpdate={data.lastUpdate}
         />
       </div>
       {selected.value === 'Global' ? (

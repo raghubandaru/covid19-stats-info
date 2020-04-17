@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { css } from 'styled-components'
 import 'styled-components/macro'
 
@@ -26,6 +27,10 @@ function Layout({ children }) {
       </Container>
     </div>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default Layout

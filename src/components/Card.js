@@ -1,5 +1,6 @@
 import React from 'react'
 import Countup from 'react-countup'
+import PropTypes from 'prop-types'
 import { css } from 'styled-components'
 import 'styled-components/macro'
 
@@ -54,6 +55,11 @@ function Card({ title, value }) {
       </h2>
     </div>
   )
+}
+
+Card.propTypes = {
+  title: PropTypes.oneOf(['Confirmed', 'Deaths', 'Recovered']).isRequired,
+  value: PropTypes.number.isRequired
 }
 
 export default Card
